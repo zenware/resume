@@ -1,0 +1,44 @@
+% resume.tex
+% vim:set ft=tex
+\documentclass[12pt,a4paper.sans]{moderncv}
+
+% theme
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+\nopagenumbers{}
+\setlength{\hintscolumnwidth}{3cm}
+
+\usepackage[scale=0.85, margin=1.5cm]{geometry}
+
+% personal details
+\name{Jay}{Looney}
+\title{student}
+\address{716 Catherine}{Washington, IL 61571}{USA}
+\phone[mobile]{+1~(516)~847~5923}
+\email{jay.m.looney@gmail.com}
+\homepage{www.jaylooney.us} % about.me or zenware.github.io?
+\social[linkedin][linkedin.com/pub/jay-looney/57/612/47]{jay-looney}
+%\social[twitter]{jaymlooney}
+\social[github]{zenware}
+%\extrainfo{Apparently quite inexperienced with \LaTeX Class Files.}
+%\photo[64pt][0.4pt]{picture}
+%\quote{`People will forget what you said, people will forget what you did, but people will never forget how you made them feel.` --- Maya Angelou}
+
+\begin{document}
+
+\makecvtitle{}
+
+\input{summary}
+\input{education}
+%\input{awards}
+\input{experience}
+\input{skills}
+%\input{languages}
+\input{interests}
+
+\nocite{*}
+
+\clearpage
+
+\end{document}
