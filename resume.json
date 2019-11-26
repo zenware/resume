@@ -48,6 +48,7 @@
         "employer": "Verve Industrial",
         "position": "Senior Software Engineer",
         "summary": "test",
+	"start": "2019-03",
         "highlights": [
           "1",
           "Contract to hire through Robert Half Technology"
@@ -57,6 +58,8 @@
         "employer": "TDS Telecom",
         "position": "Linux Engineer and Python Developer",
         "summary": "Developing internal tooling, integrations, and automation Worked on automating lots of networking hardware, F5 Load Balancers, Sandvine SDEs",
+	"start": "2017-05",
+        "end": "2019-03",
         "highlights": [
           "Decomissionioned a CMDB as part of an aquisition and migrated customers to the new platform.",
           "Deployed applications and databases in an anycasted and geodiverse environement.",
@@ -65,22 +68,16 @@
         ]
       },
       {
-        "employer": "Beacon Hill Staffing",
-        "position": "Contractor - Linux Software",
-        "summary": "test",
-        "highlights": [
-          "1",
-          "2"
-        ]
-      },
-      {
         "employer": "Notionovus",
-        "position": "Independent Contractor - Business Development, Investor Pitching, and Software Development",
+        "position": "Consultant - Business Development, Investor Pitching, and Software Development",
         "start": "2016-08",
-        "summary": "Actively developing a new architecture for middleware platforms and assisting with customer and funding acquisition. Developing the software in a virtualized linux environment. Building an SDK for connector developer consumption with C/C++ & SWIG. Building frontend prototypes in JavaScript /w React.js & backend production code in Python /w Django.",
+	"end": "2017-09"
+        "summary": "Developed middleware platforms and assisted /w customer and funding acquisition.",
         "highlights": [
+	  "Built an SDK /w C/C++ & SWIG for integration developers.",
+	  "Built frontend prototypes /w React.js & backend production code /w Django.",
           "Worked with Integris Engineering to Draw and File Patents for IP I created on behalf of Notionovus",
-          "Completed Bradley's Brave Launch Program"
+          "Completed Bradley's Brave Launch Startup Program and pitched a panel of Investors"
         ]
       },
       {
@@ -101,11 +98,14 @@
         "employer": "Odessian",
         "position": "Python Developer - Full Stack Web Development with Django",
         "start": "2016-03",
-        "summary": "Used agile development practices and PERT analysis to produce deliverables and ensure they met client specifications, required and projected use cases, and project deadlines. Ensured the product was developed up to HIPAA standards and the Python PEP 8 Style Guide. Built a dev & deployment environment on Vagrant with Ubuntu Trusty and Deadsnakes Python2.7 ppa do get proper SSL support. Migrated the original 14 year old Windows Forms VB 6 Application and hardware appliances to a Secure Django Application running in an on-site VMWare vSphere Environment. Created a new SQL schema to meet the new requirements and encompass the legacy requirements as well.",
+	"end": "2017-05",
+        "summary": "Migrated a 14 year old Forms VB 6 App to a secure Django web-app"
         "highlights": [
+	  "Unified dev & deploy environments with Vagrant",
           "Migrated thousands of existing patient records from Microsoft Access to PostgreSQL",
           "Ensured the application supported transport layer security and HIPAA compliance",
-          "Replaced failing hardware infrastructure with software"
+          "Built a new SQL Schema and migration pipeline to move thousands of patient records from AccessDB to PostgreSQL",
+	  "Developed AWS Lambda Functions in Python"
         ]
       },
       {
@@ -114,9 +114,10 @@
         "website": "https://foxytronics.com",
         "start": "2015-05",
         "end": "2016-04",
-        "summary": "Enabled secure transport for web services and patched several bugs in running services. Helped work through the PCI-AE SA and make sure the company was processing credit information in a compliant manner. Wrote utility scripts for system maintenance in Python.",
+        "summary": "Monitored, Maintained, and Audited an Electronics E-Commerce Side",
         "highlights": [
-          "PCI-AE SA",
+          "Worked through PCI-AE SA and ensured compliant card processiong",
+          "Wrote Utility Scripts for System Maintenance in Python"
           "Installed SSL Certificates and Enabled HTTPS Transport Layer Security"
         ]
       },
@@ -126,11 +127,11 @@
         "website": "https://pricewombat.com",
         "start": "2014-07",
         "end": "2016-03",
-        "summary": "Iteratively improved a PHP web scraping framework to and developed scrapers to scan more than 70 online stores.Developed a Chrome extension to help existing and future users better take advantage of the service.",
+        "summary": "Developed and maintained PHP web scraping framework, custom scrapers, and Chrome Plugin",
         "highlights": [
           "Improved System for Updating 800,000+ records every minute",
-          "Wrote Scrapers for 70 Major Sites",
-          "Developed Chrome Plugin"
+          "Wrote Scrapers for over 70 Major E-Commerce Retailers",
+          "Developed Chrome Plugin to add convenience and usability to the service"
         ]
       }
     ]
