@@ -48,6 +48,7 @@ jobs:
       env:
         RUNNER_CONTEXT: ${{ toJson(runner) }}
       run: echo "$RUNNER_CONTEXT"
+    - name: Look at files
       run: ls /home/runner/work/resume/
     - name: Dump strategy context
       env:
