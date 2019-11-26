@@ -51,7 +51,7 @@
 	"start": "2019-03",
         "highlights": [
           "Reverse engineer protocols from industrial devices and integrate them into our product",
-          "Supported indusrtial and networking hardware from Seimens PLCs, SEL Relays, Cisco IOS and ASA, Emerson, Allen-Bradley, etc."
+          "Supported indusrtial and networking hardware from Seimens PLCs, SEL Relays, Cisco IOS and ASA, Emerson, Allen-Bradley, etc.",
           "Write and review code in PowerShell, Python, C#",
           "Deliver training on Ansible Architecture for developing modules and plugins and additional connection types",
           "Maintain a massive suite of modifications to Ansible core and AWX",
@@ -65,7 +65,7 @@
 	"start": "2017-05",
         "end": "2019-03",
         "highlights": [
-          "Worked on automating lots of networking hardware, F5 Load Balancers, Sandvine SDEs"
+          "Worked on automating lots of networking hardware, F5 Load Balancers, Sandvine SDEs",
           "Decomissionioned a CMDB as part of an aquisition and migrated customers to the new platform.",
           "Deployed, maintained, and monitored applications and databases in an anycasted and geodiverse environement.",
           "Built a CLI interface and usable web GUI for automation and mgmt of auth providers on Ping Identity",
@@ -76,7 +76,7 @@
         "employer": "Notionovus",
         "position": "Consultant - Business Development, Investor Pitching, and Software Development",
         "start": "2016-08",
-	"end": "2017-09"
+	"end": "2017-09",
         "summary": "Developed middleware platforms and assisted /w customer and funding acquisition.",
         "highlights": [
 	  "Built an SDK /w C/C++ & SWIG for integration developers.",
@@ -93,7 +93,7 @@
         "summary": "Maintained a legacy suite of Building Engineering Commissioning Software /w Django.",
         "highlights": [
           "Fully Automated a CI/CD system, dramatically improving development time",
-	  "Produced consistent dev environment with Vagrant/Virtualbox and deploy environment with Docker"
+	  "Produced consistent dev environment with Vagrant/Virtualbox and deploy environment with Docker",
           "Ported the project from Django 1.4 to Django 1.8",
           "Solved a nightmare bug in an asynchronous JavaScript notification module"
         ]
@@ -119,7 +119,7 @@
         "summary": "Monitored, Maintained, and Audited an Electronics E-Commerce Side",
         "highlights": [
           "Worked through PCI-AE SA and ensured compliant card processiong",
-          "Wrote Utility Scripts for System Maintenance in Python"
+          "Wrote Utility Scripts for System Maintenance in Python",
           "Installed SSL Certificates and Enabled HTTPS Transport Layer Security"
         ]
       },
@@ -181,7 +181,7 @@
       "title": "Red Hat Certified System Administrator",
       "url": "https://www.redhat.com/rhtapps/services/verify/?certId=180-275-752",
       "event": "exam",
-      "date": "2018-11",
+      "date": "2018-11"
     },
     {
       "flavor": "award",
@@ -197,8 +197,8 @@
         "role": "Supporting Member",
         "organization": "The Linux Foundation",
         "start": "2017-11",
-        "summary": "",
-      }
+        "summary": ""
+      },
       {
         "role": "Coordinator",
         "organization": "FreeCodeCamp Meetup",
