@@ -28,11 +28,33 @@ jobs:
       id: build_resume
       run: |
         hackmyresume build resume.json to JayLooneyResume.pdf
-    - name: Upload Resume Result
-      uses: actions/upload-artifact@v1
-      with:
-        name: resume
-        path: JayLooneyResume.pdf
+one:
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - name: Dump job context
+        env:
+          JOB_CONTEXT: ${{ toJson(job) }}
+        run: echo "$JOB_CONTEXT"
+      - name: Dump steps context
+        env:
+          STEPS_CONTEXT: ${{ toJson(steps) }}
+        run: echo "$STEPS_CONTEXT"
+      - name: Dump runner context
+        env:
+          RUNNER_CONTEXT: ${{ toJson(runner) }}
+        run: echo "$RUNNER_CONTEXT"
+      - name: Dump strategy context
+        env:
+          STRATEGY_CONTEXT: ${{ toJson(strategy) }}
+        run: echo "$STRATEGY_CONTEXT"
+      - name: Dump matrix context
+        env:
+          MATRIX_CONTEXT: ${{ toJson(matrix) }}
+        run: echo "$MATRIX_CONTEXT"
   release:
     needs: build
     name: Release a resume artifact
@@ -41,6 +63,7 @@ jobs:
     - name: Create a release
       id: create_release
       uses: actions/create-release@v1.0.0
+      if: 
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
@@ -48,10 +71,6 @@ jobs:
         release_name: Release ${{ github.ref }}
         draft: false
         prerelease: false
-    - name: Download Resume PDF from Build Step
-      uses: actions/download-artifact@v1
-      with:
-        name: resume
     - name: Upload Resume PDF
       id: upload-release-asset
       uses: actions/upload-release-asset@v1.0.1
