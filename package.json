@@ -1,0 +1,19 @@
+{
+  "name": "jaylooney-resume",
+  "version": "1.0.0",
+  "description": "Copy of Jay Looney's resume as source code/npm package",
+  "scripts": {
+    "test": "hackmyresume validate resume.json && hackmyresume analyze resume.json",
+    "build": "hackmyresume build resume.json to out/JayLooneyResume.all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenware/resume.git"
+  },
+  "author": "Jay Looney <jay@jaylooney.dev> (https://www.jaylooney.dev)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zenware/resume/issues"
+  },
+  "homepage": "https://github.com/zenware/resume#readme"
+}
