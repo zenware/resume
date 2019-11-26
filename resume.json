@@ -176,6 +176,14 @@
   },
   "recognition": [
     {
+      "flavor": "certificate",
+      "from": "RedHat",
+      "title": "Red Hat Certified System Administrator",
+      "url": "https://www.redhat.com/rhtapps/services/verify/?certId=180-275-752",
+      "event": "exam",
+      "date": "2018-11",
+    },
+    {
       "flavor": "award",
       "from": "Illinois State Board of Education",
       "title": "PSAE Exceeding Science",
@@ -185,6 +193,12 @@
   ],
   "affiliation": {
     "history": [
+      {
+        "role": "Supporting Member",
+        "organization": "The Linux Foundation",
+        "start": "2017-11",
+        "summary": "",
+      }
       {
         "role": "Coordinator",
         "organization": "FreeCodeCamp Meetup",
