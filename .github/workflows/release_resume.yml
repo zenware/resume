@@ -8,7 +8,24 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
     steps:
+    - uses: actions/checkout@master
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Install HackMyResume and WkHtmlToPdf
+      run: |
+        sudo apt-get install wkhtmltopdf
+        npm install -g hackmyresume
+    - name: Npm Test and Build 
+      id: build_resume
+      run: npm run build --if-present
     - name: Create a release of my Resume
       id: create_release
       uses: actions/create-release@v1.0.0
