@@ -19,7 +19,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install HackMyResume and WkHtmlToPdf
       run: |
-        apt install wkhtmltopdf
+        sudo apt-get install wkhtmltopdf
         npm install -g hackmyresume
     - name: npm install, build, and test
       run: |
