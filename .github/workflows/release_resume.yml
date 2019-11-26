@@ -7,6 +7,7 @@ on:
 
 jobs:
   build:
+    name: Build my Resume
     runs-on: ubuntu-latest
 
     strategy:
@@ -28,12 +29,14 @@ jobs:
       run: |
         hackmyresume build resume.json to JayLooneyResume.pdf
     - name: Upload Resume Result
-      uses: actions/upload-artifact@v1
+    k uses: actions/upload-artifact@v1
       with:
         name: resume
         path: JayLooneyResume.pdf
   release:
+    name: Release a resume artifact
     runs-on: ubuntu-latest
+    steps:
     - name: Create a release
       id: create_release
       uses: actions/create-release@v1.0.0
