@@ -1,9 +1,9 @@
-name: Release Resume
+name: Release
 
 on:
   push:
     tags:
-    - 'v*'
+    - 'v20*'
 
 jobs:
   build:
@@ -11,14 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
     - name: Install HackMyResume and WkHtmlToPdf
       run: |
         sudo apt-get install wkhtmltopdf
-        sudo npm install -g hackmyresume
+        npm install -g hackmyresume
+
     - name: Build PDF Resume
       id: build_resume
       run: |
-        hackmyresume build resume.json to ./JayLooneyResume.pdf
+        hackmyresume build resume.json to ./out/JayLooneyResume.pdf
+
     - name: Create a release
       id: create_release
       uses: actions/create-release@v1.0.0
@@ -27,9 +32,10 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
+        release_name: Resume Release ${{ github.ref }}
         draft: false
         prerelease: false
+
     - name: Upload Resume PDF
       id: upload-release-asset
       uses: actions/upload-release-asset@v1.0.1
@@ -37,6 +43,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./JayLooneyResume.pdf
+        asset_path: ./out/JayLooneyResume.pdf
         asset_name: JayLooneyResume.pdf
         asset_content_type: application/pdf
