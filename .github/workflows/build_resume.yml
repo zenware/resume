@@ -1,4 +1,4 @@
-name: Node CI
+name: Validate, Analyze, and Build Resume
 
 on: [push]
 
@@ -21,9 +21,9 @@ jobs:
       run: |
         sudo apt-get install wkhtmltopdf
         npm install -g hackmyresume
-    - name: npm install, build, and test
+    - name: Npm Test and Build 
+      id: build_resume
       run: |
         npm test
         npm run build --if-present
-      env:
-        CI: true
+   
