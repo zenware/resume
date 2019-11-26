@@ -23,10 +23,10 @@ jobs:
       run: |
         sudo apt-get install wkhtmltopdf
         npm install -g hackmyresume
-    - name: Npm Test and Build 
+    - name: Build PDF Resume
       id: build_resume
-      run: npm run build --if-present
-    - name: Create a release of my Resume
+      run: hackmyresume build resume.json to JayLooneyResume.pdf
+    - name: Create a release
       id: create_release
       uses: actions/create-release@v1.0.0
       env:
