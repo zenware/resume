@@ -242,6 +242,15 @@
   "skills": {
     "sets": [
       {
+        "name": "Reverse Engineering",
+        "level": "beginner",
+        "skills": [
+          "Network Protocols",
+          "Application Software",
+          "Debugging and Testing"
+        ]
+      },
+      {
         "name": "Backend Development",
         "level": "advanced",
         "skills": [
