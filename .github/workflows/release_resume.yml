@@ -29,7 +29,7 @@ jobs:
       run: |
         hackmyresume build resume.json to JayLooneyResume.pdf
     - name: Upload Resume Result
-    k uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v1
       with:
         name: resume
         path: JayLooneyResume.pdf
