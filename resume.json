@@ -45,25 +45,30 @@
   "employment": {
     "history": [
       {
-        "employer": "Verve Industrial",
+        "employer": "Verve Industrial Protection (RKNeal)",
         "position": "Senior Software Engineer",
-        "summary": "test",
+        "summary": "Lead Developer on Critical Infrastructure agentless device inventory product",
 	"start": "2019-03",
         "highlights": [
-          "1",
+          "Reverse engineer protocols from industrial devices and integrate them into our product",
+          "Supported indusrtial and networking hardware from Seimens PLCs, SEL Relays, Cisco IOS and ASA, Emerson, Allen-Bradley, etc."
+          "Write and review code in PowerShell, Python, C#",
+          "Deliver training on Ansible Architecture for developing modules and plugins and additional connection types",
+          "Maintain a massive suite of modifications to Ansible core and AWX",
           "Contract to hire through Robert Half Technology"
         ]
       },
       {
         "employer": "TDS Telecom",
         "position": "Linux Engineer and Python Developer",
-        "summary": "Developing internal tooling, integrations, and automation Worked on automating lots of networking hardware, F5 Load Balancers, Sandvine SDEs",
+        "summary": "Developing internal tooling, integrations, and automation",
 	"start": "2017-05",
         "end": "2019-03",
         "highlights": [
+          "Worked on automating lots of networking hardware, F5 Load Balancers, Sandvine SDEs"
           "Decomissionioned a CMDB as part of an aquisition and migrated customers to the new platform.",
-          "Deployed applications and databases in an anycasted and geodiverse environement.",
-          "Built a CLI interface and a more usable web interface for automating and managing authentication providers /w Ping Identity",
+          "Deployed, maintained, and monitored applications and databases in an anycasted and geodiverse environement.",
+          "Built a CLI interface and usable web GUI for automation and mgmt of auth providers on Ping Identity",
           "Contract to Hire through Beacon Hill Staffing"
         ]
       },
@@ -85,26 +90,23 @@
         "position": "Python Developer - Full Stack Web Development with Django",
         "start": "2016-06",
         "end": "2016-09",
-        "summary": "Maintained a legacy suite of Building Engineering Commissioning Applications written in Python with the Django Web Framework. Rebuilt the dependecy declaration and management from the ground up using Vagrant to provision CentOS development environments and docker containers. The Docker containers created by Vagrant were deployed to production. Migrated dated versions of frameworks and libraries to their latest versions and updated a toolchain of custom utility scripts. Created a fully automated build system to ensure all the developers were running on the same environment. This project was built with Python using the Django framework.",
+        "summary": "Maintained a legacy suite of Building Engineering Commissioning Software /w Django.",
         "highlights": [
-          "Software Licensed to Enovity, who has comissioned multiple government buildings in San Francisco",
-          "Unified the Development Environment with Vagrant, Virtualbox, and CentOS",
-          "Simplified and Optimized the Production Environment with Vagrant and Docker",
+          "Fully Automated a CI/CD system, dramatically improving development time",
+	  "Produced consistent dev environment with Vagrant/Virtualbox and deploy environment with Docker"
           "Ported the project from Django 1.4 to Django 1.8",
           "Solved a nightmare bug in an asynchronous JavaScript notification module"
         ]
       },
       {
         "employer": "Odessian",
-        "position": "Python Developer - Full Stack Web Development with Django",
+        "position": "Contractor - Software Engineer",
         "start": "2016-03",
 	"end": "2017-05",
-        "summary": "Migrated a 14 year old Forms VB 6 App to a secure Django web-app"
+        "summary": "Migrated a 14 year old Forms VB 6 App to a HIPAA Compliant Django web-app",
         "highlights": [
 	  "Unified dev & deploy environments with Vagrant",
-          "Migrated thousands of existing patient records from Microsoft Access to PostgreSQL",
-          "Ensured the application supported transport layer security and HIPAA compliance",
-          "Built a new SQL Schema and migration pipeline to move thousands of patient records from AccessDB to PostgreSQL",
+          "Built a new SQL Schema and migration pipeline to move 10k+ patient records from AccessDB to PostgreSQL",
 	  "Developed AWS Lambda Functions in Python"
         ]
       },
