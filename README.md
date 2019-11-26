@@ -2,6 +2,12 @@
 
 This is the source repository where I store a version of my resume as code.
 
+## Versioning
+
+Rather than semver I've decided to go with a time based versioning system as the information is time sensitive.
+v<Y>.<M>.<revision>
+e.x. v2018.2.0 = The First Revision in February 2018
+
 ## Progression
 
 I started writing this in TeX /w LaTeX extensions in 2015 and since have graduated to writing it in JSONResume and finally FRESH.
