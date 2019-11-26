@@ -38,7 +38,7 @@
       "title": "Certificate in Small Business Cyber Security Strategy - Lunch and Learn",
       "event": "Cybersecurity Seminar",
       "location": "Illinois Small Business Development Center at Bradley University",
-      "date": "2017-24-10",
+      "date": "2017-10",
       "summary": "Participants will learn how to protect themselves and their customers against cybercriminals, security breaches and inside threats."
     }
   ],
@@ -210,7 +210,9 @@
         "start": "2013-06",
         "end": "2013-06",
         "summary": "Helped local school restore and maintain information on servers after a power outage and system failure.",
-        "highlights": "Full Disaster Recovery in under 24 hours"
+        "highlights": [
+          "Full Disaster Recovery in under 24 hours"
+	]
       }
     ]
   },
