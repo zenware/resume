@@ -1,0 +1,255 @@
+name: 'Jay Looney'
+meta:
+  format: FRESH@0.6.0
+  version: 0.4.0
+info:
+  brief: 'I have several years of experience working as backend and full stack developer in various domains using PHP with Laravel and the Python with frameworks like Flask and Django. My main interests are Open Source Software, Information Security, and Cryptography. Lately my tools of choice have been OS X, Git, and Python. Most of my time is spent reading new InfoSec publications or contributing to open source projects.'
+contact:
+  website: 'https://www.jaylooney.us/'
+  phone: 1-516-847-5923
+  email: jay.m.looney@gmail.com
+location:
+  address: "Jay Looney\n208 Saratoga Cir\nMadison, WI 53705"
+  city: Madison
+  region: WI
+  code: '53705'
+  country: US
+social:
+  -
+    label: GitHub
+    network: GitHub
+    user: zenware
+    url: 'https://github.com/zenware'
+  -
+    label: Twitter
+    network: Twitter
+    user: jaymlooney
+    url: 'https://twitter.com/jaymlooney'
+speaking:
+  -
+    title: 'Certificate in Small Business Cyber Security Strategy - Lunch and Learn'
+    event: 'Cybersecurity Seminar'
+    location: 'Illinois Small Business Development Center at Bradley University'
+    date: 2017-10
+    summary: 'Participants will learn how to protect themselves and their customers against cybercriminals, security breaches and inside threats.'
+employment:
+  history:
+    -
+      employer: 'Beacon Hill Staffing'
+      position: 'Contractor - Linux Software'
+      summary: test
+      highlights:
+        - '1'
+        - '2'
+    -
+      employer: Notionovus
+      position: 'Independent Contractor - Business Development, Investor Pitching, and Software Development'
+      start: 2016-08
+      summary: 'Actively developing a new architecture for middleware platforms and assisting with customer and funding acquisition. Developing the software in a virtualized linux environment. Building an SDK for connector developer consumption with C/C++ & SWIG. Building frontend prototypes in JavaScript /w React.js & backend production code in Python /w Django.'
+      highlights:
+        - 'Worked with Integris Engineering to Draw and File Patents for IP I created on behalf of Notionovus'
+        - 'Completed Bradley''s Brave Launch Program'
+    -
+      employer: Scicada
+      position: 'Python Developer - Full Stack Web Development with Django'
+      start: 2016-06
+      end: 2016-09
+      summary: 'Maintained a legacy suite of Building Engineering Commissioning Applications written in Python with the Django Web Framework. Rebuilt the dependecy declaration and management from the ground up using Vagrant to provision CentOS development environments and docker containers. The Docker containers created by Vagrant were deployed to production. Migrated dated versions of frameworks and libraries to their latest versions and updated a toolchain of custom utility scripts. Created a fully automated build system to ensure all the developers were running on the same environment. This project was built with Python using the Django framework.'
+      highlights:
+        - 'Software Licensed to Enovity, who has comissioned multiple government buildings in San Francisco'
+        - 'Unified the Development Environment with Vagrant, Virtualbox, and CentOS'
+        - 'Simplified and Optimized the Production Environment with Vagrant and Docker'
+        - 'Ported the project from Django 1.4 to Django 1.8'
+        - 'Solved a nightmare bug in an asynchronous JavaScript notification module'
+    -
+      employer: Odessian
+      position: 'Python Developer - Full Stack Web Development with Django'
+      start: 2016-03
+      summary: 'Used agile development practices and PERT analysis to produce deliverables and ensure they met client specifications, required and projected use cases, and project deadlines. Ensured the product was developed up to HIPAA standards and the Python PEP 8 Style Guide. Built a dev & deployment environment on Vagrant with Ubuntu Trusty and Deadsnakes Python2.7 ppa do get proper SSL support. Migrated the original 14 year old Windows Forms VB 6 Application and hardware appliances to a Secure Django Application running in an on-site VMWare vSphere Environment. Created a new SQL schema to meet the new requirements and encompass the legacy requirements as well.'
+      highlights:
+        - 'Migrated thousands of existing patient records from Microsoft Access to PostgreSQL'
+        - 'Ensured the application supported transport layer security and HIPAA compliance'
+        - 'Replaced failing hardware infrastructure with software'
+    -
+      employer: FoxyTronics
+      position: 'Independent Contractor - Systems Administrator'
+      website: 'https://foxytronics.com'
+      start: 2015-05
+      end: 2016-04
+      summary: 'Enabled secure transport for web services and patched several bugs in running services. Helped work through the PCI-AE SA and make sure the company was processing credit information in a compliant manner. Wrote utility scripts for system maintenance in Python.'
+      highlights:
+        - 'PCI-AE SA'
+        - 'Installed SSL Certificates and Enabled HTTPS Transport Layer Security'
+    -
+      employer: PriceWombat
+      position: 'Independent Contractor - Backend Developer'
+      website: 'https://pricewombat.com'
+      start: 2014-07
+      end: 2016-03
+      summary: 'Iteratively improved a PHP web scraping framework to and developed scrapers to scan more than 70 online stores.Developed a Chrome extension to help existing and future users better take advantage of the service.'
+      highlights:
+        - 'Improved System for Updating 800,000+ records every minute'
+        - 'Wrote Scrapers for 70 Major Sites'
+        - 'Developed Chrome Plugin'
+education:
+  level: degree
+  degree: AS
+  history:
+    -
+      institution: 'Illinois Central College'
+      title: AS
+      url: 'https://www.icc.edu/'
+      start: 2014-09
+      grade: '3.5'
+      summary: 'Computer Programming and Database Development'
+      curriculum:
+        - 'CMPSC-135 Java'
+        - 'CMPSC-140 Intro to Relational Databases'
+        - 'CMPSC-212 Advanced C++ and Data Structures'
+        - 'CMPSC-249 UNIX'
+    -
+      institution: 'Washington Community High School'
+      title: 'High School Diploma'
+      url: 'http://www.wacohi.net/'
+      start: 2010-08
+      end: 2014-04
+      summary: 'Business & Programming'
+      curriculum:
+        - 'Adv. Computer Programming'
+        - 'Adv. Business Entrepreneurship'
+        - 'Website Technology'
+        - 'Applied Technology'
+        - 'Graphic Communications'
+      private: true
+recognition:
+  -
+    flavor: award
+    from: 'Illinois State Board of Education'
+    title: 'PSAE Exceeding Science'
+    event: exam
+    date: '2014'
+affiliation:
+  history:
+    -
+      role: Coordinator
+      organization: 'FreeCodeCamp Meetup'
+      start: 2015-12
+      end: 2017-05
+      summary: 'Host and organizer of events in and around Peoria and Bloomington IL. Helping people learn to code /w a focus on modern JavaScript. Coffee and code!'
+service:
+  history:
+    -
+      position: 'FIRST Robotics Mentor'
+      organization: 'Washington Community High School'
+      url: 'http://technology-for-tots.org'
+      start: 2015-09
+      end: 2017-05
+      summary: 'Taught Eclipse, Java, and the FIRST Robotics toolkit to a team of highschool students to prepare them for competition.'
+      highlights:
+        - 'Team Awarded ''Highest Rookie Seed'' and ''Rookie All Star'''
+        - 'Iowa Reigonal Semi-finalists'
+    -
+      position: 'Event Support'
+      organization: 'Junior Achievement'
+      url: 'http://juniorachievement.org'
+      start: 2015-06
+      end: 2015-06
+      summary: 'Worked with a team of individuals supporting financial literacy in children and teens that supports area schools. Provided support on a custom built PHP application simulating the stock market. Managed donor tables and acted as a broker for the simulation.'
+      highlights:
+        - 'Since having observed and help coordinate the stock market simulation software I have been working with JA to produce a new application which will be donated upon completion.'
+    -
+      position: 'Disaster Relief'
+      organization: Various
+      start: 2013-10
+      end: 2013-12
+      summary: 'After a tornado struck Wahsington, IL I helped out a handful of organizations in the area with accepting, organizing, and distributing donations at local schools and churches.'
+    -
+      position: 'Systems Administration'
+      organization: 'District 50 Schools'
+      website: 'https://www.d50schools,com/'
+      start: 2013-06
+      end: 2013-06
+      summary: 'Helped local school restore and maintain information on servers after a power outage and system failure.'
+      highlights:
+        - 'Full Disaster Recovery in under 24 hours'
+skills:
+  sets:
+    -
+      name: 'Backend Development'
+      level: advanced
+      skills:
+        - PHP
+        - Phalcon
+        - Python
+        - Django
+        - JavaScript
+        - nodejs
+    -
+      name: 'Front-end Development'
+      level: beginner
+      skills:
+        - 'JavaScript (ES6)'
+        - React.js
+        - 'React Native'
+        - jQuery
+        - HTML5
+        - CSS3
+    -
+      name: 'Version Control'
+      level: intermediate
+      skills:
+        - Git
+        - Subversion
+        - Mercurial
+    -
+      name: Linux
+      level: intermediate
+      skills:
+        - Arch
+        - Debian
+        - Redhat
+        - Kali
+    -
+      name: 'Database Development & Administration'
+      level: intermediate
+      skills:
+        - MySQL
+        - Redis
+        - PostgreSQL
+        - MongoDB
+  interests:
+    -
+      name: 'Information Security'
+    -
+      name: 'Electronic Engineering'
+    -
+      name: 'Open Source'
+    -
+      name: 'Creative Writing'
+    -
+      name: 'Technical Theater'
+    -
+      name: Design
+  testimonials:
+    -
+      name: 'Nathan House'
+      flavor: professional
+      quote: 'Jay is knowledgeable, honest, and hard working. I look forward to collaborating with him on other projects in the future.'
+      private: true
+    -
+      name: 'Tannen Skriver'
+      flavor: personal/professional
+      quote: 'A fantastic person and friend, Jay has shown to posess the the focus, diligence, and efficiency to complete complex assignments while also being an invaluble source of wisdom and kindness. I would trust him with my life.'
+      private: true
+  languages:
+    -
+      language: English
+      level: Native
+    -
+      language: Spanish
+      level: Elementary
+      years: 1
+    -
+      language: Arabic
+      level: Elementary
+      years: 1

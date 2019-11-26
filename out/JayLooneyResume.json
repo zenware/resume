@@ -1,0 +1,220 @@
+{
+  "basics": {
+    "website": "https://www.jaylooney.us/",
+    "phone": "1-516-847-5923",
+    "email": "jay.m.looney@gmail.com",
+    "name": "Jay Looney",
+    "summary": "I have several years of experience working as backend and full stack developer in various domains using PHP with Laravel and the Python with frameworks like Flask and Django. My main interests are Open Source Software, Information Security, and Cryptography. Lately my tools of choice have been OS X, Git, and Python. Most of my time is spent reading new InfoSec publications or contributing to open source projects.",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "zenware",
+        "url": "https://github.com/zenware"
+      },
+      {
+        "network": "Twitter",
+        "username": "jaymlooney",
+        "url": "https://twitter.com/jaymlooney"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Beacon Hill Staffing",
+      "position": "Contractor - Linux Software",
+      "summary": "test",
+      "highlights": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "company": "Notionovus",
+      "position": "Independent Contractor - Business Development, Investor Pitching, and Software Development",
+      "startDate": "2016-08",
+      "summary": "Actively developing a new architecture for middleware platforms and assisting with customer and funding acquisition. Developing the software in a virtualized linux environment. Building an SDK for connector developer consumption with C/C++ & SWIG. Building frontend prototypes in JavaScript /w React.js & backend production code in Python /w Django.",
+      "highlights": [
+        "Worked with Integris Engineering to Draw and File Patents for IP I created on behalf of Notionovus",
+        "Completed Bradley's Brave Launch Program"
+      ]
+    },
+    {
+      "company": "Scicada",
+      "position": "Python Developer - Full Stack Web Development with Django",
+      "startDate": "2016-06",
+      "endDate": "2016-09",
+      "summary": "Maintained a legacy suite of Building Engineering Commissioning Applications written in Python with the Django Web Framework. Rebuilt the dependecy declaration and management from the ground up using Vagrant to provision CentOS development environments and docker containers. The Docker containers created by Vagrant were deployed to production. Migrated dated versions of frameworks and libraries to their latest versions and updated a toolchain of custom utility scripts. Created a fully automated build system to ensure all the developers were running on the same environment. This project was built with Python using the Django framework.",
+      "highlights": [
+        "Software Licensed to Enovity, who has comissioned multiple government buildings in San Francisco",
+        "Unified the Development Environment with Vagrant, Virtualbox, and CentOS",
+        "Simplified and Optimized the Production Environment with Vagrant and Docker",
+        "Ported the project from Django 1.4 to Django 1.8",
+        "Solved a nightmare bug in an asynchronous JavaScript notification module"
+      ]
+    },
+    {
+      "company": "Odessian",
+      "position": "Python Developer - Full Stack Web Development with Django",
+      "startDate": "2016-03",
+      "summary": "Used agile development practices and PERT analysis to produce deliverables and ensure they met client specifications, required and projected use cases, and project deadlines. Ensured the product was developed up to HIPAA standards and the Python PEP 8 Style Guide. Built a dev & deployment environment on Vagrant with Ubuntu Trusty and Deadsnakes Python2.7 ppa do get proper SSL support. Migrated the original 14 year old Windows Forms VB 6 Application and hardware appliances to a Secure Django Application running in an on-site VMWare vSphere Environment. Created a new SQL schema to meet the new requirements and encompass the legacy requirements as well.",
+      "highlights": [
+        "Migrated thousands of existing patient records from Microsoft Access to PostgreSQL",
+        "Ensured the application supported transport layer security and HIPAA compliance",
+        "Replaced failing hardware infrastructure with software"
+      ]
+    },
+    {
+      "company": "FoxyTronics",
+      "position": "Independent Contractor - Systems Administrator",
+      "startDate": "2015-05",
+      "endDate": "2016-04",
+      "summary": "Enabled secure transport for web services and patched several bugs in running services. Helped work through the PCI-AE SA and make sure the company was processing credit information in a compliant manner. Wrote utility scripts for system maintenance in Python.",
+      "highlights": [
+        "PCI-AE SA",
+        "Installed SSL Certificates and Enabled HTTPS Transport Layer Security"
+      ]
+    },
+    {
+      "company": "PriceWombat",
+      "position": "Independent Contractor - Backend Developer",
+      "startDate": "2014-07",
+      "endDate": "2016-03",
+      "summary": "Iteratively improved a PHP web scraping framework to and developed scrapers to scan more than 70 online stores.Developed a Chrome extension to help existing and future users better take advantage of the service.",
+      "highlights": [
+        "Improved System for Updating 800,000+ records every minute",
+        "Wrote Scrapers for 70 Major Sites",
+        "Developed Chrome Plugin"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Illinois Central College",
+      "gpa": "3.5",
+      "courses": [
+        "CMPSC-135 Java",
+        "CMPSC-140 Intro to Relational Databases",
+        "CMPSC-212 Advanced C++ and Data Structures",
+        "CMPSC-249 UNIX"
+      ],
+      "startDate": "2014-09"
+    },
+    {
+      "institution": "Washington Community High School",
+      "courses": [
+        "Adv. Computer Programming",
+        "Adv. Business Entrepreneurship",
+        "Website Technology",
+        "Applied Technology",
+        "Graphic Communications"
+      ],
+      "startDate": "2010-08",
+      "endDate": "2014-04"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Backend Development",
+      "level": "advanced",
+      "keywords": [
+        "PHP",
+        "Phalcon",
+        "Python",
+        "Django",
+        "JavaScript",
+        "nodejs"
+      ]
+    },
+    {
+      "name": "Front-end Development",
+      "level": "beginner",
+      "keywords": [
+        "JavaScript (ES6)",
+        "React.js",
+        "React Native",
+        "jQuery",
+        "HTML5",
+        "CSS3"
+      ]
+    },
+    {
+      "name": "Version Control",
+      "level": "intermediate",
+      "keywords": [
+        "Git",
+        "Subversion",
+        "Mercurial"
+      ]
+    },
+    {
+      "name": "Linux",
+      "level": "intermediate",
+      "keywords": [
+        "Arch",
+        "Debian",
+        "Redhat",
+        "Kali"
+      ]
+    },
+    {
+      "name": "Database Development & Administration",
+      "level": "intermediate",
+      "keywords": [
+        "MySQL",
+        "Redis",
+        "PostgreSQL",
+        "MongoDB"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Washington Community High School",
+      "position": "FIRST Robotics Mentor",
+      "startDate": "2015-09",
+      "endDate": "2017-05",
+      "website": "http://technology-for-tots.org",
+      "summary": "Taught Eclipse, Java, and the FIRST Robotics toolkit to a team of highschool students to prepare them for competition.",
+      "highlights": [
+        "Team Awarded 'Highest Rookie Seed' and 'Rookie All Star'",
+        "Iowa Reigonal Semi-finalists"
+      ]
+    },
+    {
+      "organization": "Junior Achievement",
+      "position": "Event Support",
+      "startDate": "2015-06",
+      "endDate": "2015-06",
+      "website": "http://juniorachievement.org",
+      "summary": "Worked with a team of individuals supporting financial literacy in children and teens that supports area schools. Provided support on a custom built PHP application simulating the stock market. Managed donor tables and acted as a broker for the simulation.",
+      "highlights": [
+        "Since having observed and help coordinate the stock market simulation software I have been working with JA to produce a new application which will be donated upon completion."
+      ]
+    },
+    {
+      "organization": "Various",
+      "position": "Disaster Relief",
+      "startDate": "2013-10",
+      "endDate": "2013-12",
+      "summary": "After a tornado struck Wahsington, IL I helped out a handful of organizations in the area with accepting, organizing, and distributing donations at local schools and churches."
+    },
+    {
+      "organization": "District 50 Schools",
+      "position": "Systems Administration",
+      "startDate": "2013-06",
+      "endDate": "2013-06",
+      "summary": "Helped local school restore and maintain information on servers after a power outage and system failure.",
+      "highlights": [
+        "Full Disaster Recovery in under 24 hours"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "flavor": "award",
+      "title": "PSAE Exceeding Science",
+      "date": "2014",
+      "awarder": "Illinois State Board of Education"
+    }
+  ]
+}
