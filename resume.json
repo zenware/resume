@@ -8,12 +8,12 @@
     "brief": "I have several years of experience working as backend and full stack developer in various domains using PHP with Laravel and the Python with frameworks like Flask and Django. My main interests are Open Source Software, Information Security, and Cryptography. Lately my tools of choice have been OS X, Git, and Python. Most of my time is spent reading new InfoSec publications or contributing to open source projects."
   },
   "contact": {
-    "website": "https://www.jaylooney.us/",
+    "website": "https://www.jaylooney.dev/",
     "phone": "1-516-847-5923",
-    "email": "jay.m.looney@gmail.com"
+    "email": "jay@jaylooney.dev"
   },
   "location": {
-    "address": "Jay Looney\n208 Saratoga Cir\nMadison, WI 53705",
+    "address": "",
     "city": "Madison",
     "region": "WI",
     "code": "53705",
@@ -44,6 +44,26 @@
   ],
   "employment": {
     "history": [
+      {
+        "employer": "Verve Industrial",
+        "position": "Senior Software Engineer",
+        "summary": "test",
+        "highlights": [
+          "1",
+          "Contract to hire through Robert Half Technology"
+        ]
+      },
+      {
+        "employer": "TDS Telecom",
+        "position": "Linux Engineer and Python Developer",
+        "summary": "Developing internal tooling, integrations, and automation Worked on automating lots of networking hardware, F5 Load Balancers, Sandvine SDEs",
+        "highlights": [
+          "Decomissionioned a CMDB as part of an aquisition and migrated customers to the new platform.",
+          "Deployed applications and databases in an anycasted and geodiverse environement.",
+          "Built a CLI interface and a more usable web interface for automating and managing authentication providers /w Ping Identity",
+          "Contract to Hire through Beacon Hill Staffing"
+        ]
+      },
       {
         "employer": "Beacon Hill Staffing",
         "position": "Contractor - Linux Software",
