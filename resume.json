@@ -8,12 +8,12 @@
     "brief": "I have several years of experience working as backend and full stack developer in various domains using PHP with Laravel and the Python with frameworks like Flask and Django. My main interests are Open Source Software, Information Security, and Cryptography. Lately my tools of choice have been OS X, Git, and Python. Most of my time is spent reading new InfoSec publications or contributing to open source projects."
   },
   "contact": {
-    "website": "https://www.jaylooney.us/",
+    "website": "https://www.jaylooney.dev/",
     "phone": "1-516-847-5923",
-    "email": "jay.m.looney@gmail.com"
+    "email": "jay@jaylooney.dev"
   },
   "location": {
-    "address": "Jay Looney\n208 Saratoga Cir\nMadison, WI 53705",
+    "address": "",
     "city": "Madison",
     "region": "WI",
     "code": "53705",
@@ -45,22 +45,44 @@
   "employment": {
     "history": [
       {
-        "employer": "Beacon Hill Staffing",
-        "position": "Contractor - Linux Software",
-        "summary": "test",
+        "employer": "Verve Industrial Protection (RKNeal)",
+        "position": "Senior Software Engineer",
+        "summary": "Lead Developer on Critical Infrastructure agentless device inventory product",
+	"start": "2019-03",
         "highlights": [
-          "1",
-          "2"
+          "Reverse engineer protocols from industrial devices and integrate them into our product",
+          "Supported indusrtial and networking hardware from Seimens PLCs, SEL Relays, Cisco IOS and ASA, Emerson, Allen-Bradley, etc.",
+          "Write and review code in PowerShell, Python, C#",
+          "Deliver training on Ansible Architecture for developing modules and plugins and additional connection types",
+          "Maintain a massive suite of modifications to Ansible core and AWX",
+          "Contract to hire through Robert Half Technology"
+        ]
+      },
+      {
+        "employer": "TDS Telecom",
+        "position": "Linux Engineer and Python Developer",
+        "summary": "Developing internal tooling, integrations, and automation",
+	"start": "2017-05",
+        "end": "2019-03",
+        "highlights": [
+          "Worked on automating lots of networking hardware, F5 Load Balancers, Sandvine SDEs",
+          "Decomissionioned a CMDB as part of an aquisition and migrated customers to the new platform.",
+          "Deployed, maintained, and monitored applications and databases in an anycasted and geodiverse environement.",
+          "Built a CLI interface and usable web GUI for automation and mgmt of auth providers on Ping Identity",
+          "Contract to Hire through Beacon Hill Staffing"
         ]
       },
       {
         "employer": "Notionovus",
-        "position": "Independent Contractor - Business Development, Investor Pitching, and Software Development",
+        "position": "Consultant - Business Development, Investor Pitching, and Software Development",
         "start": "2016-08",
-        "summary": "Actively developing a new architecture for middleware platforms and assisting with customer and funding acquisition. Developing the software in a virtualized linux environment. Building an SDK for connector developer consumption with C/C++ & SWIG. Building frontend prototypes in JavaScript /w React.js & backend production code in Python /w Django.",
+	"end": "2017-09",
+        "summary": "Developed middleware platforms and assisted /w customer and funding acquisition.",
         "highlights": [
+	  "Built an SDK /w C/C++ & SWIG for integration developers.",
+	  "Built frontend prototypes /w React.js & backend production code /w Django.",
           "Worked with Integris Engineering to Draw and File Patents for IP I created on behalf of Notionovus",
-          "Completed Bradley's Brave Launch Program"
+          "Completed Bradley's Brave Launch Startup Program and pitched a panel of Investors"
         ]
       },
       {
@@ -68,24 +90,24 @@
         "position": "Python Developer - Full Stack Web Development with Django",
         "start": "2016-06",
         "end": "2016-09",
-        "summary": "Maintained a legacy suite of Building Engineering Commissioning Applications written in Python with the Django Web Framework. Rebuilt the dependecy declaration and management from the ground up using Vagrant to provision CentOS development environments and docker containers. The Docker containers created by Vagrant were deployed to production. Migrated dated versions of frameworks and libraries to their latest versions and updated a toolchain of custom utility scripts. Created a fully automated build system to ensure all the developers were running on the same environment. This project was built with Python using the Django framework.",
+        "summary": "Maintained a legacy suite of Building Engineering Commissioning Software /w Django.",
         "highlights": [
-          "Software Licensed to Enovity, who has comissioned multiple government buildings in San Francisco",
-          "Unified the Development Environment with Vagrant, Virtualbox, and CentOS",
-          "Simplified and Optimized the Production Environment with Vagrant and Docker",
+          "Fully Automated a CI/CD system, dramatically improving development time",
+	  "Produced consistent dev environment with Vagrant/Virtualbox and deploy environment with Docker",
           "Ported the project from Django 1.4 to Django 1.8",
           "Solved a nightmare bug in an asynchronous JavaScript notification module"
         ]
       },
       {
         "employer": "Odessian",
-        "position": "Python Developer - Full Stack Web Development with Django",
+        "position": "Contractor - Software Engineer",
         "start": "2016-03",
-        "summary": "Used agile development practices and PERT analysis to produce deliverables and ensure they met client specifications, required and projected use cases, and project deadlines. Ensured the product was developed up to HIPAA standards and the Python PEP 8 Style Guide. Built a dev & deployment environment on Vagrant with Ubuntu Trusty and Deadsnakes Python2.7 ppa do get proper SSL support. Migrated the original 14 year old Windows Forms VB 6 Application and hardware appliances to a Secure Django Application running in an on-site VMWare vSphere Environment. Created a new SQL schema to meet the new requirements and encompass the legacy requirements as well.",
+	"end": "2017-05",
+        "summary": "Migrated a 14 year old Forms VB 6 App to a HIPAA Compliant Django web-app",
         "highlights": [
-          "Migrated thousands of existing patient records from Microsoft Access to PostgreSQL",
-          "Ensured the application supported transport layer security and HIPAA compliance",
-          "Replaced failing hardware infrastructure with software"
+	  "Unified dev & deploy environments with Vagrant",
+          "Built a new SQL Schema and migration pipeline to move 10k+ patient records from AccessDB to PostgreSQL",
+	  "Developed AWS Lambda Functions in Python"
         ]
       },
       {
@@ -94,9 +116,10 @@
         "website": "https://foxytronics.com",
         "start": "2015-05",
         "end": "2016-04",
-        "summary": "Enabled secure transport for web services and patched several bugs in running services. Helped work through the PCI-AE SA and make sure the company was processing credit information in a compliant manner. Wrote utility scripts for system maintenance in Python.",
+        "summary": "Monitored, Maintained, and Audited an Electronics E-Commerce Side",
         "highlights": [
-          "PCI-AE SA",
+          "Worked through PCI-AE SA and ensured compliant card processiong",
+          "Wrote Utility Scripts for System Maintenance in Python",
           "Installed SSL Certificates and Enabled HTTPS Transport Layer Security"
         ]
       },
@@ -106,11 +129,11 @@
         "website": "https://pricewombat.com",
         "start": "2014-07",
         "end": "2016-03",
-        "summary": "Iteratively improved a PHP web scraping framework to and developed scrapers to scan more than 70 online stores.Developed a Chrome extension to help existing and future users better take advantage of the service.",
+        "summary": "Developed and maintained PHP web scraping framework, custom scrapers, and Chrome Plugin",
         "highlights": [
           "Improved System for Updating 800,000+ records every minute",
-          "Wrote Scrapers for 70 Major Sites",
-          "Developed Chrome Plugin"
+          "Wrote Scrapers for over 70 Major E-Commerce Retailers",
+          "Developed Chrome Plugin to add convenience and usability to the service"
         ]
       }
     ]
@@ -153,6 +176,14 @@
   },
   "recognition": [
     {
+      "flavor": "certificate",
+      "from": "RedHat",
+      "title": "Red Hat Certified System Administrator",
+      "url": "https://www.redhat.com/rhtapps/services/verify/?certId=180-275-752",
+      "event": "exam",
+      "date": "2018-11"
+    },
+    {
       "flavor": "award",
       "from": "Illinois State Board of Education",
       "title": "PSAE Exceeding Science",
@@ -162,6 +193,12 @@
   ],
   "affiliation": {
     "history": [
+      {
+        "role": "Supporting Member",
+        "organization": "The Linux Foundation",
+        "start": "2017-11",
+        "summary": ""
+      },
       {
         "role": "Coordinator",
         "organization": "FreeCodeCamp Meetup",
@@ -218,6 +255,15 @@
   },
   "skills": {
     "sets": [
+      {
+        "name": "Reverse Engineering",
+        "level": "beginner",
+        "skills": [
+          "Network Protocols",
+          "Application Software",
+          "Debugging and Testing"
+        ]
+      },
       {
         "name": "Backend Development",
         "level": "advanced",
