@@ -11,21 +11,16 @@
     spacing: 1.2em,
 )
 
-= Jay Looney
+= John Doe
+`_john.doe@example.com` . 555.555.5555 . linkedin.com/in/johndoe
 
-#link("mailto:jay@jaylooney.dev") • +1‑516‑847‑5923 • https://www.jaylooney.dev
+== Summary
+#lorem(50)
 
-= Summary
-I have 10+ years of experience working as a backend and full stack developer
-in various domains using PHP with Laravel and Python with frameworks like Flask
-and Django. My main interests are Open Source Software, Information Security,
-and Cryptography. Lately, my tools of choice have been OS X, Git, and Python.
-Most of my time is spent reading new InfoSec publications or contributing to
-open source projects.
-
-
-= Skills
-
+== Skills
+- Python, Go, Rust, JavaScript
+- AWS, Docker, Kubernetes
+- NixOS, Terraform, Ansible
 - Reverse Engineering: Network Protocols, App Software, Debugging, Testing
 - Backend: PHP, Phalcon, Python, Django, JS, Node
 - Frontend: JS(ES6), React.js, React Native, jQuery, HTML5, CSS3
@@ -33,7 +28,14 @@ open source projects.
 - Linux: Arch, Debian, RedHat, Kali
 - Databases: MySQL, Redis, PostgreSQL, MongoDB
 
-= Experience
+== Experience
+- *Senior Data Engineer*, Dragos, Inc. (2021-2024)
+    - Optimized Elasticsearch Clusters & PostgreSQL Databases
+    - Implemented Data Pipelines and Workflows to support Enrichment and Analytics
+    - Integrated data solutions across the organization
+    - First hire to the Knowledge Pack team, responsible for delivering product upgrade packages
+    - Maintained existing release framework, and implemented new functionality
+    - Led release engineering process, ensuring smooth and reliable product updates
 
 - *Senior Software Engineer*, Verve Industrial Protection (RKNeal) (2019‑03 – Present)
     - Lead Developer on Critical Infrastructure agentless device inventory product
@@ -52,6 +54,7 @@ open source projects.
     - Built CLI and web GUI for Ping Identity
     - Contract to Hire through Beacon Hill Staffing
 
+- *Consultant/Independent Contractor*, Various Organizations (2014-07 - 2017-09)
 - *Consultant*, Notionovus (2016‑08 – 2017‑09)
     - Developed middleware platforms, acquired customers & funding
     - Built SDK in C/C++ with SWIG, React frontends, Django backends
@@ -79,22 +82,22 @@ open source projects.
     - PHP scraping framework, Chrome plugin, 70+ retail scrapers
     - Optimized updates for 800k+ records/minute
 
-= Education
+// == Education
 
-- AS, Computer Programming & Database Development, Illinois Central College (2014‑09 – Present)
-- High School Diploma, Business & Programming, Washington Community High School (2010‑08 – 2014‑04)
+// - AS, Computer Programming & Database Development, Illinois Central College (2014‑09 – Present)
+// - High School Diploma, Business & Programming, Washington Community High School (2010‑08 – 2014‑04)
 
-= Recognition
+== Recognition Certifications
 
 - 2018‑11: Red Hat Certified System Administrator — RedHat
 - 2014: PSAE Exceeding Science — Illinois State Board of Education
 
-= Languages
+// == Languages
 
-- English (native)
-- Spanish (elementary)
-- Arabic (elementary)
+// - English (native)
+// - Spanish (elementary)
+// - Arabic (elementary)
 
-= Interests
+== Interests
 
 Information Security, Electronic Engineering, Open Source, Creative Writing, Technical Theater, Design

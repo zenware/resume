@@ -16,20 +16,7 @@
       devShells = forEachSupportedsystem ({ pkgs }: {
         default = pkgs.mkShell {
           packages = [
-            pkgs.typst
-            (pkgs.texlive.combine {
-              inherit (pkgs.texlive)
-              scheme-full
-              latexmk
-              luatex
-              biber
-              amsmath
-              graphics
-              koma-script
-              hyperref
-              fontawesome5
-              tcolorbox;
-            })
+            pkgs.typst pkgs.tinymist
             pkgs.skim
             pkgs.git
           ];
