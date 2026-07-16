@@ -3,51 +3,50 @@ name: Release
 on:
   push:
     tags:
-    - 'V20*'
+    - 'v2*'
 
 jobs:
-  build:
-    name: Build and release the resume
+  release:
+    name: Build and Release Resume
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-    - name: Install HackMyResume and WkHtmlToPdf
+    - uses: actions/checkout@v4
+
+    - name: Install Typst
       run: |
-        sudo apt-get install wkhtmltopdf
-        npm install -g hackmyresume
+        curl -sL "https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz" -o /tmp/typst.tar.xz
+        tar -xJf /tmp/typst.tar.xz -C /tmp/
+        sudo mv /tmp/typst-x86_64-unknown-linux-musl/typst /usr/local/bin/typst
 
-    - name: Build PDF Resume
-      id: build_resume
+    - name: Install Atkinson Hyperlegible Font
       run: |
-        hackmyresume build resume.json to out/JayLooneyResume.pdf -t compact
+        sudo apt-get update -qq
+        sudo apt-get install -y -qq fonts-atkinson-hyperlegible 2>/dev/null || \
+          (curl -sL "https://github.com/googlefonts/atkinson-hyperlegible/releases/latest/download/Atkinson-Hyperlegible-Font.zip" -o /tmp/atkinson.zip && \
+           sudo unzip -o /tmp/atkinson.zip -d /usr/local/share/fonts/atkinson && \
+           sudo fc-cache -fv)
 
-    - name: WKhtmltoPDF
-      id: convert_to_pdf
+    - name: Compile Resume
       run: |
-        wkhtmltopdf out/JayLooneyResume.pdf JayLooneyResume.pdf
+        mkdir -p out
+        DATE=$(date +%Y-%-m-%-d)
+        typst compile resume.typ "out/JayLooneyResume_${DATE}.pdf"
+        echo "DATE=${DATE}" >> "$GITHUB_ENV"
 
-    - name: Create a release
-      id: create_release
-      uses: actions/create-release@v1.0.0
-      if: 
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: Resume Release ${{ github.ref }}
-        draft: false
-        prerelease: false
+    - name: Extract Version from Tag
+      id: version
+      run: echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
 
-    - name: Upload Resume PDF
-      id: upload-release-asset
-      uses: actions/upload-release-asset@v1.0.1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create Release
+      uses: softprops/action-gh-release@v2
       with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./JayLooneyResume.pdf
-        asset_name: JayLooneyResume.pdf
-        asset_content_type: application/pdf
+        name: Resume ${{ steps.version.outputs.version }}
+        body: |
+          Jay Looney Resume — Release ${{ steps.version.outputs.version }}
+
+          Compiled with Typst using Atkinson Hyperlegible typeface.
+        files: out/JayLooneyResume_*.pdf
+        generate_release_notes: false

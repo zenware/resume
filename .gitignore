@@ -1,0 +1,5 @@
+.DS_Store
+.devenv/
+out/JayLooneyResume_latest.pdf
+out/JayLooneyResume_*.pdf
+*.pdf

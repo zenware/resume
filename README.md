@@ -1,18 +1,61 @@
 # Jay Looney's Resume
 
-This is the source repository where I store a version of my resume as code.
+This repo contains my resume, authored in [Typst](https://typst.app/) and shipped via CI/CD.
 
-## Versioning
+## Quick Start
 
-Rather than semver I've decided to go with a time based versioning system as the information is time sensitive.
-v<Y>.<M>.<revision>
-e.x. v2018.2.0 = The First Revision in February 2018
+```bash
+# Enter the dev environment (provides typst, tinymist LSP, git, gh)
+devenv shell
 
-## Progression
+# Build the datestamped PDF
+just build
+# -> out/JayLooneyResume_2026-7-16.pdf
+# -> out/JayLooneyResume_latest.pdf (symlink to the latest)
 
-I started writing this in TeX /w LaTeX extensions in 2015 and since have graduated to writing it in JSONResume and finally FRESH.
-LaTeX being a typesetting language is the most capable of the three but requires the most knowledge and tooling to use.
-JSONResume by comparison is a dramatically simplified setup of a JSON blob with relevant resume sections.
-FRESH is meant to be a standard schema for supporting Resume data and has a format available in JSON and YAML
+# Watch for changes and auto-rebuild
+just watch
+```
 
-I've used and experienced all three for a while and am trending towards FRESH because it's the most convenient to configure automated builds for.
+## Filename Convention
+
+Built PDFs are datestamped: `JayLooneyResume_YYYY-M-D.pdf`
+
+- **Who:** `JayLooneyResume` — clear identity
+- **What:** It's a resume
+- **When:** Date of last build (`YYYY-M-D` format, filesystem-safe across OSes)
+- A `JayLooneyResume_latest.pdf` copy is always kept for convenience
+
+## Making Changes
+
+1. Edit `resume.typ`
+2. Run `just build`
+3. Review the PDF
+4. Commit and push — CI builds automatically
+
+## Releasing
+
+Tag with CalVer to trigger a GitHub Release with the datestamped PDF attached:
+
+```bash
+just release
+```
+
+This creates a `vYYYY.M.D` tag (e.g. `v2026.7.16`), builds the PDF, commits, tags, and pushes. CI then creates a GitHub Release with the datestamped PDF.
+
+### CalVer Convention
+
+`v<YYYY>.<M>.<D>` or `v<YYYY>.<M>.<D>.<REV>` if multiple releases fall on the same day.
+
+## Font
+
+Uses [Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont/) — a typeface designed for greater legibility and readability for low-vision readers. Installed automatically via the devenv environment (`languages.typst.fontPaths`).
+
+## Pipeline
+
+| Step | What |
+|------|------|
+| `resume.typ` | Source of truth — Typst markup |
+| `just build` | Compiles to `out/JayLooneyResume_YYYY-M-D.pdf` |
+| GitHub Actions (build) | Compiles on every push to master / PR |
+| GitHub Actions (release) | On `v2*` tag, creates GitHub Release + uploads datestamped PDF |

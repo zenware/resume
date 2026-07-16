@@ -1,11 +1,8 @@
 {
   "name": "jaylooney-resume",
-  "version": "1.0.0",
-  "description": "Copy of Jay Looney's resume as source code/npm package",
-  "scripts": {
-    "test": "hackmyresume validate resume.json && hackmyresume analyze resume.json",
-    "build": "hackmyresume build resume.json to out/JayLooneyResume.all"
-  },
+  "version": "2025.7.1",
+  "description": "Jay Looney's resume — authored in Typst, CI/CD via GitHub Actions.",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zenware/resume.git"
