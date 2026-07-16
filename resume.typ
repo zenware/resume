@@ -1,100 +1,111 @@
+#let accent = rgb("#2c3e50")
+
 #set page(
     paper: "us-letter",
-    //margin: 0.75in  // Could be 0.5 -> 1 inch
-    margin: 1in
+    margin: (x: 0.6in, y: 0.5in),
 )
 #set text(
     font: "Atkinson Hyperlegible",
-    size: 11pt,
+    size: 10pt,
+    lang: "en",
 )
-#set par(
-    spacing: 1.2em,
-)
+#set par(justify: true, leading: 0.65em, spacing: 0.4em)
+
+#show heading.where(level: 1): it => {
+    set text(size: 11pt, weight: "bold", fill: accent)
+    v(0.5em)
+    block(it.body)
+    v(0.1em)
+    line(length: 100%, stroke: 0.5pt + accent.lighten(50%))
+    v(0.2em)
+}
+
+#show heading.where(level: 2): it => {
+    v(0.3em)
+    block(it.body)
+}
+
+#let job(company, title, dates, location, body) = {
+    v(0.2em)
+    grid(
+        columns: (1fr, auto),
+        column-gutter: 1em,
+        [#text(weight: "bold", size: 10.5pt, company) \
+          #text(style: "italic", size: 9.5pt, title)],
+        [#text(size: 9pt, fill: gray, dates) \
+          #text(size: 9pt, fill: gray, location)],
+    )
+    v(0.1em)
+    body
+}
 
 = Jay Looney
 
-#link("mailto:jay@jaylooney.dev") • +1‑516‑847‑5923 • https://www.jaylooney.dev
+#grid(
+    columns: (1fr, auto),
+    align: (left, right),
+    [#text(size: 9pt, [#link("mailto:jay@jaylooney.dev")[jay\@jaylooney.dev] #h(0.5em) #link("https://www.jaylooney.dev")[www.jaylooney.dev]])],
+    [#text(size: 9pt, [+1 516-847-5923 #h(0.5em) #link("https://github.com/zenware")[github.com/zenware] / #link("https://linkedin.com/in/jaylooney")[linkedin.com/in/jaylooney]])],
+)
 
-= Summary
-I have 10+ years of experience working as a backend and full stack developer
-in various domains using PHP with Laravel and Python with frameworks like Flask
-and Django. My main interests are Open Source Software, Information Security,
-and Cryptography. Lately, my tools of choice have been OS X, Git, and Python.
-Most of my time is spent reading new InfoSec publications or contributing to
-open source projects.
+#v(0.3em)
 
+Software engineer building reliable systems at scale -- data engineering, infrastructure, and security. 5 years in ICS/OT cybersecurity building platforms and tooling that defend critical infrastructure. Open to senior/staff engineering roles (data, platform/SRE, backend, security), consulting, and advisory. Remote-friendly, Madison, WI.
 
 = Skills
 
-- Reverse Engineering: Network Protocols, App Software, Debugging, Testing
-- Backend: PHP, Phalcon, Python, Django, JS, Node
-- Frontend: JS(ES6), React.js, React Native, jQuery, HTML5, CSS3
-- Version Control: Git, SVN, Mercurial
-- Linux: Arch, Debian, RedHat, Kali
-- Databases: MySQL, Redis, PostgreSQL, MongoDB
+#grid(
+    columns: (1fr, 1fr),
+    column-gutter: 1.5em,
+    row-gutter: 0.3em,
+    [*Data / Infra:* Python, PostgreSQL, Elasticsearch/ELK, SQL, ETL, CI/CD, Docker, Nix, Ansible, Git],
+    [*ICS/OT Security:* Protocol RE, agentless inventory, Siemens, SEL, Emerson, Allen-Bradley, NERC-CIP],
+    [*Backend:* REST APIs, distributed systems, message queues],
+    [*Systems:* Release engineering, disaster recovery, networking, load balancing, Vagrant],
+)
 
 = Experience
 
-- *Senior Software Engineer*, Verve Industrial Protection (RKNeal) (2019‑03 – Present)
-    - Lead Developer on Critical Infrastructure agentless device inventory product
-    - Reverse engineer protocols from industrial devices
-    - Supported Siemens PLCs, SEL Relays, Cisco IOS/ASA, Emerson, Allen‑Bradley, etc.
-    - Write and review code in PowerShell, Python, `C#`
-    - Deliver training on Ansible architecture
-    - Maintain extensive modifications to Ansible core and AWX
-    - Contract to hire through Robert Half Technology
+#job("Dragos, Inc.", "Senior Software Engineer", "2021 -- 2024", "Fulton, MD (remote)")[
 
-- *Linux Engineer & Python Developer*, TDS Telecom (2017‑05 – 2019‑03)
-    - Developed internal tooling, integrations, and automation
-    - Automated networking hardware, F5 Load Balancers, Sandvine SDEs
-    - Decommissioned CMDB and migrated customers
-    - Managed apps & databases in anycasted, geo-diverse environments
-    - Built CLI and web GUI for Ping Identity
-    - Contract to Hire through Beacon Hill Staffing
+Founding hire twice: *Knowledge Pack* (release engineering) then founding *Data* team.
 
-- *Consultant*, Notionovus (2016‑08 – 2017‑09)
-    - Developed middleware platforms, acquired customers & funding
-    - Built SDK in C/C++ with SWIG, React frontends, Django backends
-    - Worked on patent filings with Integris Engineering
-    - Completed Bradley's Brave Launch, pitched to investors
++ Rebuilt platform release into CI/CD producing online/offline ISO gold images on demand; designed separate content-only vs code-only release tracks for NERC-CIP compliance.
++ Built custom Elasticsearch index-management service for lifecycle, shard optimization, and cross-cluster operations at scale.
++ Consolidated scattered SQL and MongoDB onto a single PostgreSQL, reducing operational surface area.
++ Designed lightweight backup/restore system for DR and environment promotion (QA to Prod, Prod-to-Prod replication across plants).
+]
 
-- *Python Developer*, Scicada (2016‑06 – 2016‑09)
-    - Maintained legacy Building Commissioning Software (Django)
-    - Automated CI/CD dramatically improving dev time
-    - Used Vagrant/VirtualBox for dev, Docker for deploy
-    - Ported from Django 1.4 to 1.8
-    - Debugged async JavaScript notifications
+#job("Verve Industrial Protection", "Senior Software Engineer", "2019 -- 2021", "Peoria, IL")[
 
-- *Contractor (Software Engineer)*, Odessian (2016‑03 – 2017‑05)
-    - Migrated VB6 app to HIPAA-compliant Django app
-    - Unified dev & deploy environments with Vagrant
-    - Built SQL schema & migrated 10k+ patients to PostgreSQL
-    - Developed AWS Lambda functions in Python
++ Reverse-engineered industrial protocols (Siemens, SEL, Emerson, Allen-Bradley, Cisco IOS/ASA) for agentless device discovery and fingerprinting.
++ Maintained ICS-aware fork of Ansible core and AWX for industrial device orchestration.
++ Built physical hardware lab from scratch -- DIN-rail benches, sourcing and unlocking industrial gear for testing.
+]
 
-- *Independent Contractor (Systems Admin)*, FoxyTronics (2015‑05 – 2016‑04)
-    - Monitored & audited ecommerce site, PCI compliance
-    - Python maintenance scripts, SSL & HTTPS setup
+#job("TDS Telecom", "Linux Engineer & Python Developer", "2017 -- 2019", "Madison, WI (remote)")[
 
-- *Independent Contractor (Backend Developer)*, PriceWombat (2014‑07 – 2016‑03)
-    - PHP scraping framework, Chrome plugin, 70+ retail scrapers
-    - Optimized updates for 800k+ records/minute
++ Automated networking hardware: F5 Load Balancers, Sandvine SDEs across ISP footprint.
++ Decommissioned legacy CMDB during acquisition, migrating customer data to new platform.
++ Built CLI and web GUI for managing auth providers on Ping Identity.
+]
 
-= Education
+#job("Independent Contractor", "Various -- Notionovus, Scicada, Odessian, FoxyTronics, PriceWombat", "2014 -- 2017", "Central IL")[
 
-- AS, Computer Programming & Database Development, Illinois Central College (2014‑09 – Present)
-- High School Diploma, Business & Programming, Washington Community High School (2010‑08 – 2014‑04)
++ *Notionovus:* C/C++ SDK with SWIG, React/Django full-stack, patent filings, Brave Launch accelerator.
++ *Odessian:* Migrated VB6 app to HIPAA-compliant Django; 10k+ patient records from Access to PostgreSQL.
++ *PriceWombat:* PHP scraping framework, 70+ retailer scrapers, 800k+ records/min.
+]
 
-= Recognition
+= Education & Certifications
 
-- 2018‑11: Red Hat Certified System Administrator — RedHat
-- 2014: PSAE Exceeding Science — Illinois State Board of Education
+#grid(
+    columns: (1fr, auto),
+    column-gutter: 1em,
+    [*AS, Computer Programming & Database Development* -- Illinois Central College (3.5 GPA)],
+    [RHCSA (2018) -- #link("https://www.redhat.com/rhtapps/services/verify/?certId=180-275-752")[Verify]],
+)
 
-= Languages
+= Community
 
-- English (native)
-- Spanish (elementary)
-- Arabic (elementary)
-
-= Interests
-
-Information Security, Electronic Engineering, Open Source, Creative Writing, Technical Theater, Design
+FIRST Robotics Mentor (2015-17) -- taught Java/robotics; team won Highest Rookie Seed. FreeCodeCamp Coordinator, Central IL (2015-17). Junior Achievement volunteer (2015).

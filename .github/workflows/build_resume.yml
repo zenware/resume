@@ -1,24 +1,43 @@
 name: Build
 
-on: [push]
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
 
 jobs:
   build:
-    name: Validate, Analyze, and Build
+    name: Compile Resume PDF
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - uses: actions/setup-node@v1
+    - uses: actions/checkout@v4
+
+    - name: Install Typst
+      run: |
+        curl -sL "https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz" -o /tmp/typst.tar.xz
+        tar -xJf /tmp/typst.tar.xz -C /tmp/
+        sudo mv /tmp/typst-x86_64-unknown-linux-musl/typst /usr/local/bin/typst
+
+    - name: Install Atkinson Hyperlegible Font
+      run: |
+        sudo apt-get update -qq
+        sudo apt-get install -y -qq fonts-atkinson-hyperlegible 2>/dev/null || \
+          (curl -sL "https://github.com/googlefonts/atkinson-hyperlegible/releases/latest/download/Atkinson-Hyperlegible-Font.zip" -o /tmp/atkinson.zip && \
+           sudo unzip -o /tmp/atkinson.zip -d /usr/local/share/fonts/atkinson && \
+           sudo fc-cache -fv)
+
+    - name: Compile Resume
+      run: |
+        mkdir -p out
+        DATE=$(date +%Y-%-m-%-d)
+        typst compile resume.typ "out/JayLooneyResume_${DATE}.pdf"
+        cp "out/JayLooneyResume_${DATE}.pdf" out/JayLooneyResume_latest.pdf
+        echo "DATE=${DATE}" >> "$GITHUB_ENV"
+
+    - name: Upload PDF Artifact
+      uses: actions/upload-artifact@v4
       with:
-        node-version: '12.x'
-    - name: Install HackMyResume and WkHtmlToPdf
-      run: |
-        sudo apt-get install wkhtmltopdf
-        npm install -g hackmyresume
-    - name: Npm Test and Build 
-      id: build_resume
-      run: |
-        npm test
-        npm run build --if-present
-   
+        name: JayLooneyResume_${{ env.DATE }}
+        path: out/JayLooneyResume_*.pdf

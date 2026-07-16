@@ -1,61 +1,61 @@
 # Jay Looney's Resume
 
-This is the source repository where I store a version of my resume as code.
+This repo contains my resume, authored in [Typst](https://typst.app/) and shipped via CI/CD.
 
-## Versioning
+## Quick Start
 
-Rather than semver I've decided to go with a time based versioning system as the information is time sensitive.
-v<Y>.<M>.<revision>
-e.x. v2018.2.0 = The First Revision in February 2018
+```bash
+# Enter the dev environment (provides typst, tinymist LSP, git, gh)
+devenv shell
 
-## Build
+# Build the datestamped PDF
+just build
+# -> out/JayLooneyResume_2026-7-16.pdf
+# -> out/JayLooneyResume_latest.pdf (symlink to the latest)
 
-```shell
-#nix run github:zenware/resume
-nix build  # Just build the thing.
+# Watch for changes and auto-rebuild
+just watch
 ```
 
-```shell
-latexmk -lualatex -pdf document.tex  # Build a copy of the PDF
-latexmk -pvc document.tex -f         # Automatically Recompile while Editing
+## Filename Convention
+
+Built PDFs are datestamped: `JayLooneyResume_YYYY-M-D.pdf`
+
+- **Who:** `JayLooneyResume` — clear identity
+- **What:** It's a resume
+- **When:** Date of last build (`YYYY-M-D` format, filesystem-safe across OSes)
+- A `JayLooneyResume_latest.pdf` copy is always kept for convenience
+
+## Making Changes
+
+1. Edit `resume.typ`
+2. Run `just build`
+3. Review the PDF
+4. Commit and push — CI builds automatically
+
+## Releasing
+
+Tag with CalVer to trigger a GitHub Release with the datestamped PDF attached:
+
+```bash
+just release
 ```
 
+This creates a `vYYYY.M.D` tag (e.g. `v2026.7.16`), builds the PDF, commits, tags, and pushes. CI then creates a GitHub Release with the datestamped PDF.
 
-```shell
-latexmk -output-directory="./demo-out" -lualatex -pdf jakesresume.tex
-latexmk -output-directory="./demo-out" -lualatex -pdf resume.tex
-latexmk -output-directory="./demo-out" -lualatex -pdf resume-minimal.tex
+### CalVer Convention
 
+`v<YYYY>.<M>.<D>` or `v<YYYY>.<M>.<D>.<REV>` if multiple releases fall on the same day.
 
-```
+## Font
 
-## Progression
+Uses [Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont/) — a typeface designed for greater legibility and readability for low-vision readers. Installed automatically via the devenv environment (`languages.typst.fontPaths`).
 
-I started writing this in TeX /w LaTeX extensions in 2015 and since have
-graduated to writing it in JSONResume and finally FRESH. LaTeX being a
-typesetting language is the most capable of the three but requires the most
-knowledge and tooling to use.
+## Pipeline
 
-JSONResume by comparison is a dramatically simplified setup of a JSON blob
-with relevant resume sections. FRESH is meant to be a standard schema for
-supporting Resume data and has a format available in JSON and YAML
-
-I've used and experienced all three for a while and am trending towards FRESH
-because it's the most convenient to configure automated builds for.
-
-2025-06-27 I'm switching back to LaTeX--it turns out it's the most stable
-option and suffers the least from bit rot.
-
-
-## Resources
-
-- [Official NixOS Wiki for TexLive](nixos-wiki)
-- [NixPkgs user guide for the new Tex Live interface in nixpkgs >= 23.11](nixpkgs-manual)
-- https://flyx.org/nix-flakes-latex/
-- https://github.com/Leixb/latex-template
-- [Medium Article](medium-article) written by [@kersten.kriegbaum](kersten-kriegbaum)
-
-[medium-article]: https://medium.com/digitalfrontiers/a-reproducible-latex-setup-on-macos-with-nix-flakes-direnv-tex-live-76333c8b8d20
-[kersten-kriegbaum]: https://medium.com/@kersten.kriegbaum
-[nixos-wiki]: https://wiki.nixos.org/wiki/TexLive
-[nixpkgs-manual]:  https://nixos.org/manual/nixpkgs/stable/#sec-language-texlive-user-guide-experimental
+| Step | What |
+|------|------|
+| `resume.typ` | Source of truth — Typst markup |
+| `just build` | Compiles to `out/JayLooneyResume_YYYY-M-D.pdf` |
+| GitHub Actions (build) | Compiles on every push to master / PR |
+| GitHub Actions (release) | On `v2*` tag, creates GitHub Release + uploads datestamped PDF |
